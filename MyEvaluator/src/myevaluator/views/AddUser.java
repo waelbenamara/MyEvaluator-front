@@ -5,6 +5,7 @@ import java.awt.EventQueue;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 import javax.swing.Box;
 import javax.swing.DefaultComboBoxModel;
@@ -13,6 +14,7 @@ import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 
 import com.google.gson.Gson;
@@ -20,6 +22,7 @@ import com.google.gson.Gson;
 import myevaluator.libs.MyRadioButtonCourses;
 import myevaluator.libs.MyRadioButtonGroups;
 import myevaluator.libs.Request;
+import myevaluator.models.User;
 import myevaluator.models.Professor;
 
 public class AddUser {
@@ -68,155 +71,155 @@ public class AddUser {
     frame.getContentPane().add(panel);
     panel.setLayout(null);
     
-    MyRadioButtonCourses rdbtnNewRadioButton = new MyRadioButtonCourses("CS102");
+    MyRadioButtonCourses rdbtnNewRadioButton = new MyRadioButtonCourses("CS101");
     rdbtnNewRadioButton.setForeground(Color.BLACK);
-    rdbtnNewRadioButton.setBounds(29, 76, 72, 23);
+    rdbtnNewRadioButton.setBounds(29, 76, 83, 23);
     panel.add(rdbtnNewRadioButton);
     
     MyRadioButtonCourses radioButton = new MyRadioButtonCourses("CS102");
     radioButton.setForeground(Color.BLACK);
-    radioButton.setBounds(29, 113, 72, 23);
+    radioButton.setBounds(29, 113, 83, 23);
     panel.add(radioButton);
     
-    MyRadioButtonCourses radioButton_1 = new MyRadioButtonCourses("CS102");
+    MyRadioButtonCourses radioButton_1 = new MyRadioButtonCourses("CS261");
     radioButton_1.setForeground(Color.BLACK);
-    radioButton_1.setBounds(29, 147, 72, 23);
+    radioButton_1.setBounds(29, 147, 83, 23);
     panel.add(radioButton_1);
     
-    MyRadioButtonCourses radioButton_2 = new MyRadioButtonCourses("CS102");
+    MyRadioButtonCourses radioButton_2 = new MyRadioButtonCourses("MATH141");
     radioButton_2.setForeground(Color.BLACK);
-    radioButton_2.setBounds(29, 178, 72, 23);
+    radioButton_2.setBounds(29, 178, 83, 23);
     panel.add(radioButton_2);
     
-    MyRadioButtonCourses radioButton_3 = new MyRadioButtonCourses("CS102");
+    MyRadioButtonCourses radioButton_3 = new MyRadioButtonCourses("ECO171");
     radioButton_3.setForeground(Color.BLACK);
-    radioButton_3.setBounds(29, 209, 72, 23);
+    radioButton_3.setBounds(29, 209, 83, 23);
     panel.add(radioButton_3);
     
-    MyRadioButtonCourses radioButton_4 = new MyRadioButtonCourses("CS102");
+    MyRadioButtonCourses radioButton_4 = new MyRadioButtonCourses("ENG111");
     radioButton_4.setForeground(Color.BLACK);
-    radioButton_4.setBounds(29, 242, 72, 23);
+    radioButton_4.setBounds(29, 242, 83, 23);
     panel.add(radioButton_4);
     
-    MyRadioButtonCourses radioButton_5 = new MyRadioButtonCourses("CS102");
+    MyRadioButtonCourses radioButton_5 = new MyRadioButtonCourses("ECE251");
     radioButton_5.setForeground(Color.BLACK);
-    radioButton_5.setBounds(29, 277, 72, 23);
+    radioButton_5.setBounds(29, 277, 83, 23);
     panel.add(radioButton_5);
     
-    MyRadioButtonCourses radioButton_6 = new MyRadioButtonCourses("CS102");
+    MyRadioButtonCourses radioButton_6 = new MyRadioButtonCourses("COM205");
     radioButton_6.setForeground(Color.BLACK);
-    radioButton_6.setBounds(29, 312, 72, 23);
+    radioButton_6.setBounds(29, 312, 83, 23);
     panel.add(radioButton_6);
     
-    MyRadioButtonCourses radioButton_7 = new MyRadioButtonCourses("CS102");
+    MyRadioButtonCourses radioButton_7 = new MyRadioButtonCourses("MATH241");
     radioButton_7.setForeground(Color.BLACK);
-    radioButton_7.setBounds(29, 349, 72, 23);
+    radioButton_7.setBounds(29, 349, 83, 23);
     panel.add(radioButton_7);
     
-    MyRadioButtonCourses radioButton_8 = new MyRadioButtonCourses("CS102");
+    MyRadioButtonCourses radioButton_8 = new MyRadioButtonCourses("MATH341");
     radioButton_8.setForeground(Color.BLACK);
-    radioButton_8.setBounds(29, 45, 72, 23);
+    radioButton_8.setBounds(29, 45, 83, 23);
     panel.add(radioButton_8);
     
-    MyRadioButtonCourses radioButton_9 = new MyRadioButtonCourses("CS102");
+    MyRadioButtonCourses radioButton_9 = new MyRadioButtonCourses("PHYS152");
     radioButton_9.setForeground(Color.BLACK);
-    radioButton_9.setBounds(132, 45, 72, 23);
+    radioButton_9.setBounds(132, 45, 83, 23);
     panel.add(radioButton_9);
     
-    MyRadioButtonCourses radioButton_10 = new MyRadioButtonCourses("CS102");
+    MyRadioButtonCourses radioButton_10 = new MyRadioButtonCourses("CS261");
     radioButton_10.setForeground(Color.BLACK);
-    radioButton_10.setBounds(240, 45, 72, 23);
+    radioButton_10.setBounds(240, 45, 83, 23);
     panel.add(radioButton_10);
     
-    MyRadioButtonCourses radioButton_11 = new MyRadioButtonCourses("CS102");
+    MyRadioButtonCourses radioButton_11 = new MyRadioButtonCourses("ENG121");
     radioButton_11.setForeground(Color.BLACK);
-    radioButton_11.setBounds(132, 76, 72, 23);
+    radioButton_11.setBounds(132, 76, 83, 23);
     panel.add(radioButton_11);
     
-    MyRadioButtonCourses radioButton_12 = new MyRadioButtonCourses("CS102");
+    MyRadioButtonCourses radioButton_12 = new MyRadioButtonCourses("ISS196");
     radioButton_12.setForeground(Color.BLACK);
-    radioButton_12.setBounds(240, 76, 72, 23);
+    radioButton_12.setBounds(240, 76, 83, 23);
     panel.add(radioButton_12);
     
-    MyRadioButtonCourses radioButton_13 = new MyRadioButtonCourses("CS102");
+    MyRadioButtonCourses radioButton_13 = new MyRadioButtonCourses("ISS197");
     radioButton_13.setForeground(Color.BLACK);
-    radioButton_13.setBounds(132, 113, 72, 23);
+    radioButton_13.setBounds(132, 113, 83, 23);
     panel.add(radioButton_13);
     
     
-    MyRadioButtonCourses radioButton_14 = new MyRadioButtonCourses("CS102");
+    MyRadioButtonCourses radioButton_14 = new MyRadioButtonCourses("MATH243");
     radioButton_14.setForeground(Color.BLACK);
-    radioButton_14.setBounds(240, 113, 72, 23);
+    radioButton_14.setBounds(240, 113, 83, 23);
     panel.add(radioButton_14);
     
-    MyRadioButtonCourses radioButton_15 = new MyRadioButtonCourses("CS102");
+    MyRadioButtonCourses radioButton_15 = new MyRadioButtonCourses("MATH244");
     radioButton_15.setForeground(Color.BLACK);
-    radioButton_15.setBounds(132, 147, 72, 23);
+    radioButton_15.setBounds(132, 147, 83, 23);
     panel.add(radioButton_15);
     
-    MyRadioButtonCourses radioButton_16 = new MyRadioButtonCourses("CS102");
+    MyRadioButtonCourses radioButton_16 = new MyRadioButtonCourses("PSY101");
     radioButton_16.setForeground(Color.BLACK);
-    radioButton_16.setBounds(132, 178, 72, 23);
+    radioButton_16.setBounds(132, 178, 83, 23);
     panel.add(radioButton_16);
     
-    MyRadioButtonCourses radioButton_17 = new MyRadioButtonCourses("CS102");
+    MyRadioButtonCourses radioButton_17 = new MyRadioButtonCourses(" CS341");
     radioButton_17.setForeground(Color.BLACK);
-    radioButton_17.setBounds(132, 209, 72, 23);
+    radioButton_17.setBounds(132, 209, 83, 23);
     panel.add(radioButton_17);
     
-    MyRadioButtonCourses radioButton_18 = new MyRadioButtonCourses("CS102");
+    MyRadioButtonCourses radioButton_18 = new MyRadioButtonCourses("CS303");
     radioButton_18.setForeground(Color.BLACK);
-    radioButton_18.setBounds(132, 242, 72, 23);
+    radioButton_18.setBounds(132, 242, 83, 23);
     panel.add(radioButton_18);
     
-    MyRadioButtonCourses radioButton_19 = new MyRadioButtonCourses("CS102");
+    MyRadioButtonCourses radioButton_19 = new MyRadioButtonCourses("MATH441");
     radioButton_19.setForeground(Color.BLACK);
-    radioButton_19.setBounds(132, 277, 72, 23);
+    radioButton_19.setBounds(132, 277, 83, 23);
     panel.add(radioButton_19);
     
-    MyRadioButtonCourses radioButton_20 = new MyRadioButtonCourses("CS102");
+    MyRadioButtonCourses radioButton_20 = new MyRadioButtonCourses("ECE371");
     radioButton_20.setForeground(Color.BLACK);
-    radioButton_20.setBounds(132, 312, 72, 23);
+    radioButton_20.setBounds(132, 312, 83, 23);
     panel.add(radioButton_20);
     
-    MyRadioButtonCourses radioButton_21 = new MyRadioButtonCourses("CS102");
+    MyRadioButtonCourses radioButton_21 = new MyRadioButtonCourses("CS303");
     radioButton_21.setForeground(Color.BLACK);
-    radioButton_21.setBounds(132, 349, 72, 23);
+    radioButton_21.setBounds(132, 349, 83, 23);
     panel.add(radioButton_21);
     
-    MyRadioButtonCourses radioButton_22 = new MyRadioButtonCourses("CS102");
+    MyRadioButtonCourses radioButton_22 = new MyRadioButtonCourses("CS321");
     radioButton_22.setForeground(Color.BLACK);
-    radioButton_22.setBounds(240, 147, 72, 23);
+    radioButton_22.setBounds(240, 147, 83, 23);
     panel.add(radioButton_22);
     
-    MyRadioButtonCourses radioButton_23 = new MyRadioButtonCourses("CS102");
+    MyRadioButtonCourses radioButton_23 = new MyRadioButtonCourses("GOV101");
     radioButton_23.setForeground(Color.BLACK);
-    radioButton_23.setBounds(240, 178, 72, 23);
+    radioButton_23.setBounds(240, 178, 83, 23);
     panel.add(radioButton_23);
     
-    MyRadioButtonCourses radioButton_24 = new MyRadioButtonCourses("CS102");
+    MyRadioButtonCourses radioButton_24 = new MyRadioButtonCourses("ME310");
     radioButton_24.setForeground(Color.BLACK);
-    radioButton_24.setBounds(240, 209, 72, 23);
+    radioButton_24.setBounds(240, 209, 83, 23);
     panel.add(radioButton_24);
     
-    MyRadioButtonCourses radioButton_25 = new MyRadioButtonCourses("CS102");
+    MyRadioButtonCourses radioButton_25 = new MyRadioButtonCourses("ME350");
     radioButton_25.setForeground(Color.BLACK);
-    radioButton_25.setBounds(240, 242, 72, 23);
+    radioButton_25.setBounds(240, 242, 83, 23);
     panel.add(radioButton_25);
     
-    MyRadioButtonCourses radioButton_26 = new MyRadioButtonCourses("CS102");
+    MyRadioButtonCourses radioButton_26 = new MyRadioButtonCourses("CHEM262");
     radioButton_26.setForeground(Color.BLACK);
-    radioButton_26.setBounds(240, 277, 72, 23);
+    radioButton_26.setBounds(240, 277, 83, 23);
     panel.add(radioButton_26);
     
-    MyRadioButtonCourses radioButton_27 = new MyRadioButtonCourses("CS102");
+    MyRadioButtonCourses radioButton_27 = new MyRadioButtonCourses("MATH348");
     radioButton_27.setForeground(Color.BLACK);
-    radioButton_27.setBounds(240, 312, 72, 23);
+    radioButton_27.setBounds(240, 312, 83, 23);
     panel.add(radioButton_27);
     
-    MyRadioButtonCourses radioButton_28 = new MyRadioButtonCourses("CS102");
+    MyRadioButtonCourses radioButton_28 = new MyRadioButtonCourses("CS420");
     radioButton_28.setForeground(Color.BLACK);
-    radioButton_28.setBounds(240, 349, 72, 23);
+    radioButton_28.setBounds(240, 349, 83, 23);
     panel.add(radioButton_28);
     
     Box horizontalBox = Box.createHorizontalBox();
@@ -325,7 +328,6 @@ public class AddUser {
     typeBox.setModel(new DefaultComboBoxModel(new String[] {"Professor", "Student", "Faculty"}));
     typeBox.setBounds(111, 207, 195, 27);
     panel_1.add(typeBox);
-    
     JButton btnAddUser = new JButton("Add User");
     btnAddUser.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e) {
@@ -333,18 +335,26 @@ public class AddUser {
         String lastname = textLastName.getText();
         String email = textEmail.getText();
         String type = (String) typeBox.getModel().getElementAt(typeBox.getSelectedIndex()) ;
-        System.out.println(type);
-        Professor p = new Professor(name,lastname,email,type);
-        
-        Gson g = new Gson();
-        String json = g.toJson(p);
-        System.out.println(json);
-        Request r = new Request();
-        r.SendRequest("http://0.0.0.0:80/add_user", "POST", json);
-       
-       
-          
-        
+  
+        ArrayList<String> temp = new ArrayList<String>();
+        ArrayList<String> temp1 = new ArrayList<String>();
+        for (JRadioButton i:MyRadioButtonCourses.getCourses()) {
+           if(i.isSelected()!=false) {
+           String courses=i.getText();
+           temp.add(courses);
+           }
+           }
+        for (JRadioButton j:MyRadioButtonGroups.getGroups()) {
+          if(j.isSelected()!=false) {
+          String groups=j.getText();
+          temp1.add(groups);
+          }
+          }
+        Gson g1 = new Gson();
+        String json1 = g1.toJson(new User(name,lastname,email,type,temp,temp1));
+        System.out.println(json1);
+       Request r1 = new Request();
+        r1.SendRequest("http://192.168.62.15:80/add_user", "POST", json1);
       }
     });
     btnAddUser.setBounds(131, 339, 117, 29);
