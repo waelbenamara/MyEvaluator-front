@@ -58,164 +58,165 @@ public class AddUser {
    */
   private void initialize() {
     frame = new JFrame();
-    frame.setBounds(100, 100, 700, 600);
+    frame.setBounds(200, 100, 900, 900);
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     frame.getContentPane().setLayout(new GridLayout(1, 0, 0, 0));
     
     JPanel panel = new JPanel();
+    panel.setForeground(Color.BLACK);
     panel.setBackground(Color.BLACK);
     frame.getContentPane().add(panel);
     panel.setLayout(null);
     
     MyRadioButtonCourses rdbtnNewRadioButton = new MyRadioButtonCourses("CS102");
-    rdbtnNewRadioButton.setForeground(Color.WHITE);
-    rdbtnNewRadioButton.setBounds(29, 57, 72, 23);
+    rdbtnNewRadioButton.setForeground(Color.BLACK);
+    rdbtnNewRadioButton.setBounds(29, 76, 72, 23);
     panel.add(rdbtnNewRadioButton);
     
     MyRadioButtonCourses radioButton = new MyRadioButtonCourses("CS102");
-    radioButton.setForeground(Color.WHITE);
-    radioButton.setBounds(29, 92, 72, 23);
+    radioButton.setForeground(Color.BLACK);
+    radioButton.setBounds(29, 113, 72, 23);
     panel.add(radioButton);
     
     MyRadioButtonCourses radioButton_1 = new MyRadioButtonCourses("CS102");
-    radioButton_1.setForeground(Color.WHITE);
-    radioButton_1.setBounds(29, 127, 72, 23);
+    radioButton_1.setForeground(Color.BLACK);
+    radioButton_1.setBounds(29, 147, 72, 23);
     panel.add(radioButton_1);
     
     MyRadioButtonCourses radioButton_2 = new MyRadioButtonCourses("CS102");
-    radioButton_2.setForeground(Color.WHITE);
-    radioButton_2.setBounds(29, 162, 72, 23);
+    radioButton_2.setForeground(Color.BLACK);
+    radioButton_2.setBounds(29, 178, 72, 23);
     panel.add(radioButton_2);
     
     MyRadioButtonCourses radioButton_3 = new MyRadioButtonCourses("CS102");
-    radioButton_3.setForeground(Color.WHITE);
-    radioButton_3.setBounds(29, 197, 72, 23);
+    radioButton_3.setForeground(Color.BLACK);
+    radioButton_3.setBounds(29, 209, 72, 23);
     panel.add(radioButton_3);
     
     MyRadioButtonCourses radioButton_4 = new MyRadioButtonCourses("CS102");
-    radioButton_4.setForeground(Color.WHITE);
-    radioButton_4.setBounds(29, 232, 72, 23);
+    radioButton_4.setForeground(Color.BLACK);
+    radioButton_4.setBounds(29, 242, 72, 23);
     panel.add(radioButton_4);
     
     MyRadioButtonCourses radioButton_5 = new MyRadioButtonCourses("CS102");
-    radioButton_5.setForeground(Color.WHITE);
-    radioButton_5.setBounds(29, 267, 72, 23);
+    radioButton_5.setForeground(Color.BLACK);
+    radioButton_5.setBounds(29, 277, 72, 23);
     panel.add(radioButton_5);
     
     MyRadioButtonCourses radioButton_6 = new MyRadioButtonCourses("CS102");
-    radioButton_6.setForeground(Color.WHITE);
-    radioButton_6.setBounds(29, 302, 72, 23);
+    radioButton_6.setForeground(Color.BLACK);
+    radioButton_6.setBounds(29, 312, 72, 23);
     panel.add(radioButton_6);
     
     MyRadioButtonCourses radioButton_7 = new MyRadioButtonCourses("CS102");
-    radioButton_7.setForeground(Color.WHITE);
-    radioButton_7.setBounds(29, 337, 72, 23);
+    radioButton_7.setForeground(Color.BLACK);
+    radioButton_7.setBounds(29, 349, 72, 23);
     panel.add(radioButton_7);
     
     MyRadioButtonCourses radioButton_8 = new MyRadioButtonCourses("CS102");
-    radioButton_8.setForeground(Color.WHITE);
-    radioButton_8.setBounds(29, 22, 72, 23);
+    radioButton_8.setForeground(Color.BLACK);
+    radioButton_8.setBounds(29, 45, 72, 23);
     panel.add(radioButton_8);
     
     MyRadioButtonCourses radioButton_9 = new MyRadioButtonCourses("CS102");
-    radioButton_9.setForeground(Color.WHITE);
-    radioButton_9.setBounds(132, 22, 72, 23);
+    radioButton_9.setForeground(Color.BLACK);
+    radioButton_9.setBounds(132, 45, 72, 23);
     panel.add(radioButton_9);
     
     MyRadioButtonCourses radioButton_10 = new MyRadioButtonCourses("CS102");
-    radioButton_10.setForeground(Color.WHITE);
-    radioButton_10.setBounds(240, 22, 72, 23);
+    radioButton_10.setForeground(Color.BLACK);
+    radioButton_10.setBounds(240, 45, 72, 23);
     panel.add(radioButton_10);
     
     MyRadioButtonCourses radioButton_11 = new MyRadioButtonCourses("CS102");
-    radioButton_11.setForeground(Color.WHITE);
-    radioButton_11.setBounds(132, 57, 72, 23);
+    radioButton_11.setForeground(Color.BLACK);
+    radioButton_11.setBounds(132, 76, 72, 23);
     panel.add(radioButton_11);
     
     MyRadioButtonCourses radioButton_12 = new MyRadioButtonCourses("CS102");
-    radioButton_12.setForeground(Color.WHITE);
-    radioButton_12.setBounds(240, 57, 72, 23);
+    radioButton_12.setForeground(Color.BLACK);
+    radioButton_12.setBounds(240, 76, 72, 23);
     panel.add(radioButton_12);
     
     MyRadioButtonCourses radioButton_13 = new MyRadioButtonCourses("CS102");
-    radioButton_13.setForeground(Color.WHITE);
-    radioButton_13.setBounds(132, 92, 72, 23);
+    radioButton_13.setForeground(Color.BLACK);
+    radioButton_13.setBounds(132, 113, 72, 23);
     panel.add(radioButton_13);
     
     
     MyRadioButtonCourses radioButton_14 = new MyRadioButtonCourses("CS102");
-    radioButton_14.setForeground(Color.WHITE);
-    radioButton_14.setBounds(240, 92, 72, 23);
+    radioButton_14.setForeground(Color.BLACK);
+    radioButton_14.setBounds(240, 113, 72, 23);
     panel.add(radioButton_14);
     
     MyRadioButtonCourses radioButton_15 = new MyRadioButtonCourses("CS102");
-    radioButton_15.setForeground(Color.WHITE);
-    radioButton_15.setBounds(132, 127, 72, 23);
+    radioButton_15.setForeground(Color.BLACK);
+    radioButton_15.setBounds(132, 147, 72, 23);
     panel.add(radioButton_15);
     
     MyRadioButtonCourses radioButton_16 = new MyRadioButtonCourses("CS102");
-    radioButton_16.setForeground(Color.WHITE);
-    radioButton_16.setBounds(132, 162, 72, 23);
+    radioButton_16.setForeground(Color.BLACK);
+    radioButton_16.setBounds(132, 178, 72, 23);
     panel.add(radioButton_16);
     
     MyRadioButtonCourses radioButton_17 = new MyRadioButtonCourses("CS102");
-    radioButton_17.setForeground(Color.WHITE);
-    radioButton_17.setBounds(132, 197, 72, 23);
+    radioButton_17.setForeground(Color.BLACK);
+    radioButton_17.setBounds(132, 209, 72, 23);
     panel.add(radioButton_17);
     
     MyRadioButtonCourses radioButton_18 = new MyRadioButtonCourses("CS102");
-    radioButton_18.setForeground(Color.WHITE);
-    radioButton_18.setBounds(132, 232, 72, 23);
+    radioButton_18.setForeground(Color.BLACK);
+    radioButton_18.setBounds(132, 242, 72, 23);
     panel.add(radioButton_18);
     
     MyRadioButtonCourses radioButton_19 = new MyRadioButtonCourses("CS102");
-    radioButton_19.setForeground(Color.WHITE);
-    radioButton_19.setBounds(132, 267, 72, 23);
+    radioButton_19.setForeground(Color.BLACK);
+    radioButton_19.setBounds(132, 277, 72, 23);
     panel.add(radioButton_19);
     
     MyRadioButtonCourses radioButton_20 = new MyRadioButtonCourses("CS102");
-    radioButton_20.setForeground(Color.WHITE);
-    radioButton_20.setBounds(132, 302, 72, 23);
+    radioButton_20.setForeground(Color.BLACK);
+    radioButton_20.setBounds(132, 312, 72, 23);
     panel.add(radioButton_20);
     
     MyRadioButtonCourses radioButton_21 = new MyRadioButtonCourses("CS102");
-    radioButton_21.setForeground(Color.WHITE);
-    radioButton_21.setBounds(132, 337, 72, 23);
+    radioButton_21.setForeground(Color.BLACK);
+    radioButton_21.setBounds(132, 349, 72, 23);
     panel.add(radioButton_21);
     
     MyRadioButtonCourses radioButton_22 = new MyRadioButtonCourses("CS102");
-    radioButton_22.setForeground(Color.WHITE);
-    radioButton_22.setBounds(240, 127, 72, 23);
+    radioButton_22.setForeground(Color.BLACK);
+    radioButton_22.setBounds(240, 147, 72, 23);
     panel.add(radioButton_22);
     
     MyRadioButtonCourses radioButton_23 = new MyRadioButtonCourses("CS102");
-    radioButton_23.setForeground(Color.WHITE);
-    radioButton_23.setBounds(240, 162, 72, 23);
+    radioButton_23.setForeground(Color.BLACK);
+    radioButton_23.setBounds(240, 178, 72, 23);
     panel.add(radioButton_23);
     
     MyRadioButtonCourses radioButton_24 = new MyRadioButtonCourses("CS102");
-    radioButton_24.setForeground(Color.WHITE);
-    radioButton_24.setBounds(240, 197, 72, 23);
+    radioButton_24.setForeground(Color.BLACK);
+    radioButton_24.setBounds(240, 209, 72, 23);
     panel.add(radioButton_24);
     
     MyRadioButtonCourses radioButton_25 = new MyRadioButtonCourses("CS102");
-    radioButton_25.setForeground(Color.WHITE);
-    radioButton_25.setBounds(240, 232, 72, 23);
+    radioButton_25.setForeground(Color.BLACK);
+    radioButton_25.setBounds(240, 242, 72, 23);
     panel.add(radioButton_25);
     
     MyRadioButtonCourses radioButton_26 = new MyRadioButtonCourses("CS102");
-    radioButton_26.setForeground(Color.WHITE);
-    radioButton_26.setBounds(240, 267, 72, 23);
+    radioButton_26.setForeground(Color.BLACK);
+    radioButton_26.setBounds(240, 277, 72, 23);
     panel.add(radioButton_26);
     
     MyRadioButtonCourses radioButton_27 = new MyRadioButtonCourses("CS102");
-    radioButton_27.setForeground(Color.WHITE);
-    radioButton_27.setBounds(240, 302, 72, 23);
+    radioButton_27.setForeground(Color.BLACK);
+    radioButton_27.setBounds(240, 312, 72, 23);
     panel.add(radioButton_27);
     
     MyRadioButtonCourses radioButton_28 = new MyRadioButtonCourses("CS102");
-    radioButton_28.setForeground(Color.WHITE);
-    radioButton_28.setBounds(240, 337, 72, 23);
+    radioButton_28.setForeground(Color.BLACK);
+    radioButton_28.setBounds(240, 349, 72, 23);
     panel.add(radioButton_28);
     
     Box horizontalBox = Box.createHorizontalBox();
@@ -226,62 +227,61 @@ public class AddUser {
     
     JLabel lblNewLabel = new JLabel("Courses");
     lblNewLabel.setForeground(Color.WHITE);
-    lblNewLabel.setBounds(40, 6, 61, 16);
+    lblNewLabel.setBounds(18, 11, 61, 16);
     panel.add(lblNewLabel);
     
     JLabel lblGroups = new JLabel("Groups");
     lblGroups.setForeground(Color.WHITE);
-    lblGroups.setBounds(40, 368, 61, 16);
+    lblGroups.setBounds(18, 386, 61, 16);
     panel.add(lblGroups);
     
     MyRadioButtonGroups rdbtnF = new MyRadioButtonGroups("F1");
-    rdbtnF.setForeground(Color.WHITE);
-    rdbtnF.setBounds(18, 396, 61, 23);
+    rdbtnF.setForeground(Color.BLACK);
+    rdbtnF.setBounds(29, 419, 61, 23);
     panel.add(rdbtnF);
     
     MyRadioButtonGroups rdbtnF_1 = new MyRadioButtonGroups("F2");
-    rdbtnF_1.setForeground(Color.WHITE);
-    rdbtnF_1.setBounds(91, 396, 61, 23);
+    rdbtnF_1.setForeground(Color.BLACK);
+    rdbtnF_1.setBounds(108, 419, 61, 23);
     panel.add(rdbtnF_1);
     
     MyRadioButtonGroups rdbtnF_2 = new MyRadioButtonGroups("F3");
-    rdbtnF_2.setForeground(Color.WHITE);
-    rdbtnF_2.setBounds(164, 396, 61, 23);
+    rdbtnF_2.setForeground(Color.BLACK);
+    rdbtnF_2.setBounds(187, 419, 61, 23);
     panel.add(rdbtnF_2);
     
     MyRadioButtonGroups rdbtnF_3 = new MyRadioButtonGroups("F4");
-    rdbtnF_3.setForeground(Color.WHITE);
-    rdbtnF_3.setBounds(240, 396, 47, 23);
+    rdbtnF_3.setForeground(Color.BLACK);
+    rdbtnF_3.setBounds(265, 419, 47, 23);
     panel.add(rdbtnF_3);
     
     MyRadioButtonGroups rdbtnS = new MyRadioButtonGroups("S1");
-    rdbtnS.setForeground(Color.WHITE);
-    rdbtnS.setBounds(18, 430, 61, 23);
+    rdbtnS.setForeground(Color.BLACK);
+    rdbtnS.setBounds(29, 460, 61, 23);
     panel.add(rdbtnS);
     
     MyRadioButtonGroups rdbtnS_1 = new MyRadioButtonGroups("S2");
-    rdbtnS_1.setForeground(Color.WHITE);
-    rdbtnS_1.setBounds(127, 430, 61, 23);
-    panel.add(rdbtnS_1);
-    
+    rdbtnS_1.setForeground(Color.BLACK);
+    rdbtnS_1.setBounds(108, 460, 61, 23);
+    panel.add(rdbtnS_1);    
     MyRadioButtonGroups rdbtnS_2 = new MyRadioButtonGroups("S3");
-    rdbtnS_2.setForeground(Color.WHITE);
-    rdbtnS_2.setBounds(240, 430, 61, 23);
+    rdbtnS_2.setForeground(Color.BLACK);
+    rdbtnS_2.setBounds(187, 460, 61, 23);
     panel.add(rdbtnS_2);
     
     MyRadioButtonGroups rdbtnSe = new MyRadioButtonGroups("SE-J");
-    rdbtnSe.setForeground(Color.WHITE);
-    rdbtnSe.setBounds(18, 472, 61, 23);
+    rdbtnSe.setForeground(Color.BLACK);
+    rdbtnSe.setBounds(29, 500, 61, 23);
     panel.add(rdbtnSe);
     
     MyRadioButtonGroups rdbtnCsj = new MyRadioButtonGroups("CS-J");
-    rdbtnCsj.setForeground(Color.WHITE);
-    rdbtnCsj.setBounds(127, 472, 61, 23);
+    rdbtnCsj.setForeground(Color.BLACK);
+    rdbtnCsj.setBounds(108, 500, 61, 23);
     panel.add(rdbtnCsj);
     
     MyRadioButtonGroups rdbtnRej = new MyRadioButtonGroups("RE-J");
-    rdbtnRej.setForeground(Color.WHITE);
-    rdbtnRej.setBounds(240, 472, 61, 23);
+    rdbtnRej.setForeground(Color.BLACK);
+    rdbtnRej.setBounds(187, 500, 61, 23);
     panel.add(rdbtnRej);
     
    
