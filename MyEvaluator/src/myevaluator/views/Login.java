@@ -8,6 +8,13 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JSeparator;
 import javax.swing.border.EmptyBorder;
+
+import com.google.gson.Gson;
+
+import myevaluator.libs.LoginResponse;
+import myevaluator.libs.Request;
+import myevaluator.models.Credentials;
+
 import java.awt.GridLayout;
 import javax.swing.JSpinner;
 import javax.swing.JTextField;
@@ -20,9 +27,15 @@ import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
 import javax.swing.JProgressBar;
 import java.awt.Color;
+import java.awt.Font;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JPasswordField;
 
 public class Login extends JFrame {
   private JTextField textField;
+  private JTextField email;
+  private JPasswordField passwordField;
 
   /**
    * Launch the application.
@@ -55,38 +68,64 @@ public class Login extends JFrame {
     getContentPane().add(panel);
     panel.setLayout(null);
     
-    JLabel lblNewLabel = new JLabel("Validate Account");
+    JLabel lblNewLabel = new JLabel("Email");
     lblNewLabel.setForeground(Color.WHITE);
-    lblNewLabel.setBounds(59, 6, 116, 16);
+    lblNewLabel.setBounds(112, 99, 61, 16);
     panel.add(lblNewLabel);
     
-    JComboBox comboBox = new JComboBox();
-    comboBox.setModel(new DefaultComboBoxModel(new String[] {"Professor", "Student", "Faculty"}));
-    comboBox.setBounds(48, 99, 127, 27);
-    panel.add(comboBox);
+    JLabel lblPassword = new JLabel("Password");
+    lblPassword.setForeground(Color.WHITE);
+    lblPassword.setBounds(112, 139, 61, 16);
+    panel.add(lblPassword);
     
-    JButton btnValid = new JButton("Validate");
-    btnValid.setBounds(48, 192, 127, 29);
-    panel.add(btnValid);
+    email = new JTextField();
+    email.setBounds(185, 94, 130, 26);
+    panel.add(email);
+    email.setColumns(10);
     
-    JPanel panel_1 = new JPanel();
-    panel_1.setBackground(Color.WHITE);
-    getContentPane().add(panel_1);
-    panel_1.setLayout(null);
+    JButton btnNewButton = new JButton("Login");
+    btnNewButton.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        String mail = email.getText();
+        String password = passwordField.getPassword().toString();
+        Request r = new Request();
+        
+        Gson g = new Gson();
+        String json = g.toJson(new Credentials(mail,password));
+        System.out.println(json);
+        StringBuilder s = r.SendRequest("http://0.0.0.0:80","GET", json);
+        Gson g2 = new Gson();
+        LoginResponse log = g.fromJson(s.toString(),LoginResponse.class);
+        if (log.getStatus() == "200" ) {
+          System.out.println("You have access");
+            if(log.getType() == "p") {
+              System.out.println("this is a professor");
+              
+            }else if (log.getType() == "s") {
+              System.out.println("this is a student");
+            }else {
+              System.out.println("this is a faculty");
+            }
+          
+        }else {
+          System.out.println("This person does not ");
+        }
+        
+       
+      }
+    });
+    btnNewButton.setBounds(170, 198, 117, 29);
+    panel.add(btnNewButton);
     
-    JLabel Login = new JLabel("Login");
-    Login.setForeground(Color.BLACK);
-    Login.setBounds(89, 6, 44, 16);
-    panel_1.add(Login);
+    JLabel lblNewLabel_1 = new JLabel("Welcome to MyEvaluator");
+    lblNewLabel_1.setFont(new Font("Sinhala Sangam MN", Font.PLAIN, 28));
+    lblNewLabel_1.setForeground(Color.WHITE);
+    lblNewLabel_1.setBounds(77, 16, 296, 42);
+    panel.add(lblNewLabel_1);
     
-    JButton btnLogin = new JButton("Login");
-    btnLogin.setBounds(55, 194, 127, 29);
-    panel_1.add(btnLogin);
-    
-    textField = new JTextField();
-    textField.setBounds(52, 99, 130, 26);
-    panel_1.add(textField);
-    textField.setColumns(10);
+    passwordField = new JPasswordField();
+    passwordField.setBounds(185, 134, 130, 26);
+    panel.add(passwordField);
     
     
     

@@ -354,7 +354,7 @@ public class AddUser {
         String json1 = g1.toJson(new User(name,lastname,email,type,temp,temp1));
         System.out.println(json1);
        Request r1 = new Request();
-        r1.SendRequest("http://192.168.62.15:80/add_user", "POST", json1);
+        r1.SendRequest("http://0.0.0.0:80/add_user", "POST", json1);
       }
     });
     btnAddUser.setBounds(131, 339, 117, 29);
