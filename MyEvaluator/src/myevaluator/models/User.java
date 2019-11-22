@@ -9,7 +9,25 @@ public class User {
   private String LastName;
   private String Email;
   private String type;
-  public User(String name, String lastName, String email, String type,
+  private String password;
+  public User(String name, String lastName, String email, String type, String password, ArrayList<String> coursesSelected,
+		ArrayList<String> groupsSelected) {
+	super();
+	Name = name;
+	LastName = lastName;
+	Email = email;
+	this.type = type;
+	this.password = password;
+	this.coursesSelected = coursesSelected;
+	this.groupsSelected = groupsSelected;
+}
+public String getPassword() {
+	return password;
+}
+public void setPassword(String password) {
+	this.password = password;
+}
+public User(String name, String lastName, String email, String type,
       ArrayList<String> coursesSelected, ArrayList<String> groupsSelected) {
     super();
     Name = name;

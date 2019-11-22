@@ -87,29 +87,28 @@ public class Login extends JFrame {
     btnNewButton.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e) {
         String mail = email.getText();
-        String password = passwordField.getPassword().toString();
+        String password = passwordField.getText();
         Request r = new Request();
         
         Gson g = new Gson();
         String json = g.toJson(new Credentials(mail,password));
-        System.out.println(json);
-        StringBuilder s = r.SendRequest("http://0.0.0.0:80","GET", json);
+        StringBuilder s = r.SendRequest("http://0.0.0.0:80/login","GET", json);
+        System.out.println(s.toString());
         Gson g2 = new Gson();
-        LoginResponse log = g.fromJson(s.toString(),LoginResponse.class);
-        if (log.getStatus() == "200" ) {
-          System.out.println("You have access");
-            if(log.getType() == "p") {
-              System.out.println("this is a professor");
-              
-            }else if (log.getType() == "s") {
-              System.out.println("this is a student");
-            }else {
-              System.out.println("this is a faculty");
-            }
-          
+        LoginResponse log = g2.fromJson(s.toString(),LoginResponse.class);
+   
+        
+        
+        if(log.getResponse().equals("200") && log.getType().equals("Professor")) {
+        	System.out.print("Professor");
+        } else if(log.getResponse().equals("200") && log.getType().equals("Student")) {
+        	System.out.println("Student");
+        } else if(log.getResponse().equals("200") && log.getType().equals("Faculty")) {
+        	System.out.println("Faculty");
         }else {
-          System.out.println("This person does not ");
+        	System.out.println("Login errors");
         }
+        	
         
        
       }
@@ -127,8 +126,7 @@ public class Login extends JFrame {
     passwordField.setBounds(185, 134, 130, 26);
     panel.add(passwordField);
     
-    
-    
+   
     
   }
 }

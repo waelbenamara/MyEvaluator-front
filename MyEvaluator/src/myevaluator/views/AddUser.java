@@ -13,6 +13,7 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
@@ -24,6 +25,7 @@ import myevaluator.libs.MyRadioButtonGroups;
 import myevaluator.libs.Request;
 import myevaluator.models.User;
 import myevaluator.models.Professor;
+import javax.swing.JPasswordField;
 
 public class AddUser {
 
@@ -31,6 +33,8 @@ public class AddUser {
   private JTextField textName;
   private JTextField textLastName;
   private JTextField textEmail;
+  private JPasswordField passwordField;
+  private JPasswordField passwordField_1;
   
 
   /**
@@ -294,7 +298,7 @@ public class AddUser {
     panel_1.setLayout(null);
     
     textName = new JTextField();
-    textName.setBounds(111, 53, 201, 26);
+    textName.setBounds(144, 53, 201, 26);
     panel_1.add(textName);
     textName.setColumns(10);
     
@@ -303,7 +307,7 @@ public class AddUser {
     panel_1.add(lblName);
     
     textLastName = new JTextField();
-    textLastName.setBounds(111, 99, 201, 26);
+    textLastName.setBounds(144, 99, 201, 26);
     panel_1.add(textLastName);
     textLastName.setColumns(10);
     
@@ -312,21 +316,21 @@ public class AddUser {
     panel_1.add(lblLastname);
     
     JLabel lblEmail = new JLabel("Email");
-    lblEmail.setBounds(26, 150, 75, 16);
+    lblEmail.setBounds(26, 142, 75, 16);
     panel_1.add(lblEmail);
     
     textEmail = new JTextField();
-    textEmail.setBounds(111, 145, 201, 26);
+    textEmail.setBounds(144, 137, 201, 26);
     panel_1.add(textEmail);
     textEmail.setColumns(10);
     
     JLabel lblType = new JLabel("Type");
-    lblType.setBounds(26, 207, 75, 16);
+    lblType.setBounds(26, 268, 75, 16);
     panel_1.add(lblType);
     
     JComboBox typeBox = new JComboBox();
     typeBox.setModel(new DefaultComboBoxModel(new String[] {"Professor", "Student", "Faculty"}));
-    typeBox.setBounds(111, 207, 195, 27);
+    typeBox.setBounds(150, 264, 195, 27);
     panel_1.add(typeBox);
     JButton btnAddUser = new JButton("Add User");
     btnAddUser.addActionListener(new ActionListener() {
@@ -334,6 +338,10 @@ public class AddUser {
         String name = textName.getText();
         String lastname = textLastName.getText();
         String email = textEmail.getText();
+        String pass1 = passwordField.getText();
+        String pass2 = passwordField_1.getText();
+        
+        
         String type = (String) typeBox.getModel().getElementAt(typeBox.getSelectedIndex()) ;
   
         ArrayList<String> temp = new ArrayList<String>();
@@ -350,14 +358,36 @@ public class AddUser {
           temp1.add(groups);
           }
           }
+      
+        if (pass1.equals(pass2)) {
         Gson g1 = new Gson();
-        String json1 = g1.toJson(new User(name,lastname,email,type,temp,temp1));
+        String json1 = g1.toJson(new User(name,lastname,email,type,pass1,temp,temp1));
         System.out.println(json1);
        Request r1 = new Request();
         r1.SendRequest("http://0.0.0.0:80/add_user", "POST", json1);
+        System.out.println("hhhh");
+      }else {
+		JOptionPane.showMessageDialog(null, "Password do not match");
+	}
       }
     });
-    btnAddUser.setBounds(131, 339, 117, 29);
+    btnAddUser.setBounds(156, 389, 117, 29);
     panel_1.add(btnAddUser);
+    
+    JLabel password = new JLabel("password");
+    password.setBounds(24, 180, 75, 16);
+    panel_1.add(password);
+    
+    JLabel lblConfirmPassword = new JLabel("confirm password");
+    lblConfirmPassword.setBounds(26, 207, 131, 38);
+    panel_1.add(lblConfirmPassword);
+    
+    passwordField = new JPasswordField();
+    passwordField.setBounds(144, 175, 201, 26);
+    panel_1.add(passwordField);
+    
+    passwordField_1 = new JPasswordField();
+    passwordField_1.setBounds(144, 213, 201, 26);
+    panel_1.add(passwordField_1);
   }
 }

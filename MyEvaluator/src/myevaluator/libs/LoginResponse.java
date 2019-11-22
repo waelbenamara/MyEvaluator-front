@@ -2,16 +2,16 @@ package myevaluator.libs;
 
 public class LoginResponse {
   
-  private String status;
+  private String response;
   
   private String type;
 
-  public String getStatus() {
-    return status;
+  public String getResponse() {
+    return response;
   }
 
-  public void setStatus(String status) {
-    this.status = status;
+  public void setResponse(String status) {
+    this.response = status;
   }
 
   public String getType() {
