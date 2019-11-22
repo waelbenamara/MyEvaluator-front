@@ -8,7 +8,11 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.Window;
+
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class AdminMenu extends JFrame {
 
@@ -55,6 +59,13 @@ public class AdminMenu extends JFrame {
 		contentPane.add(facultydashboard);
 		
 		JButton btnGetAnalysisBased = new JButton("Get Analysis Based on Courses");
+		btnGetAnalysisBased.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				AdminCourses a = new AdminCourses();
+				a.setVisible(true);
+				System.out.println("ttttt");
+			}
+		});
 		btnGetAnalysisBased.setBounds(109, 163, 245, 29);
 		contentPane.add(btnGetAnalysisBased);
 	}

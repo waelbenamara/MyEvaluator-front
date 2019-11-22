@@ -14,7 +14,7 @@ import myevaluator.libs.Request;
 import javax.swing.JList;
 import javax.swing.AbstractListModel;
 
-public class AdminCourses {
+public class AdminCourses extends JFrame{
 
 	private JFrame frame;
 
