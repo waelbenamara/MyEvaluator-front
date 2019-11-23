@@ -13,10 +13,13 @@ import myevaluator.libs.Request;
 
 import javax.swing.JList;
 import javax.swing.AbstractListModel;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
-public class AdminCourses extends JFrame{
+public class StudentReviewCourses extends JFrame{
 
-	JFrame frame;
+	private JFrame frame;
 
 	/**
 	 * Launch the application.
@@ -26,7 +29,7 @@ public class AdminCourses extends JFrame{
 			public void run() {
 				try {
 					
-					AdminCourses window = new AdminCourses();
+					StudentReviewCourses window = new StudentReviewCourses();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -38,7 +41,7 @@ public class AdminCourses extends JFrame{
 	/**
 	 * Create the application.
 	 */
-	public AdminCourses() {
+	public StudentReviewCourses() {
 		initialize();
 	}
 
@@ -59,6 +62,15 @@ public class AdminCourses extends JFrame{
 		JList list = new JList(getCourses().toArray());
 		scrollPane.setViewportView(list);
 		
+		JButton btnNewButton = new JButton("SetFeedBack");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+			}
+		});
+		btnNewButton.setBounds(181, 218, 117, 29);
+		frame.getContentPane().add(btnNewButton);
+		
 		
 	
 	}
@@ -66,7 +78,7 @@ public class AdminCourses extends JFrame{
 	public ArrayList<String> getCourses() {
 		
 		Request r = new Request();
-		String data = r.SendRequest("http://0.0.0.0:80/get_courses", "GET","").toString();
+		String data = r.SendRequest("http://0.0.0.0:80/get_courses_for_student", "GET","").toString();
 		Gson g = new Gson();
 		GetCoursesResponse response = g.fromJson(data, GetCoursesResponse.class);
 		

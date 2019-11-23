@@ -5,8 +5,18 @@ public class LoginResponse {
   private String response;
   
   private String type;
+  
+  private int id ; 
 
-  public String getResponse() {
+  public int getId() {
+	return id;
+}
+
+public void setId(int id) {
+	this.id = id;
+}
+
+public String getResponse() {
     return response;
   }
 

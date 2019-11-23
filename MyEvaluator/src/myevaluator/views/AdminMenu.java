@@ -51,10 +51,21 @@ public class AdminMenu extends JFrame {
 		contentPane.add(lblNewLabel);
 		
 		JButton addUser = new JButton("Add User");
+		addUser.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				AddUser a = new AddUser();
+				a.main(null);
+			}
+		});
 		addUser.setBounds(109, 71, 239, 29);
 		contentPane.add(addUser);
 		
 		JButton facultydashboard = new JButton("Get Analysis Based on Professors");
+		facultydashboard.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+			}
+		});
 		facultydashboard.setBounds(109, 118, 245, 29);
 		contentPane.add(facultydashboard);
 		
@@ -62,8 +73,7 @@ public class AdminMenu extends JFrame {
 		btnGetAnalysisBased.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				AdminCourses a = new AdminCourses();
-				a.setVisible(true);
-				System.out.println("ttttt");
+				a.main(null);
 			}
 		});
 		btnGetAnalysisBased.setBounds(109, 163, 245, 29);

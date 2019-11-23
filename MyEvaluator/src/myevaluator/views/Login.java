@@ -14,6 +14,7 @@ import com.google.gson.Gson;
 import myevaluator.libs.LoginResponse;
 import myevaluator.libs.Request;
 import myevaluator.models.Credentials;
+import myevaluator.models.CurrentUser;
 
 import java.awt.GridLayout;
 import javax.swing.JSpinner;
@@ -101,12 +102,23 @@ public class Login extends JFrame {
         
         if(log.getResponse().equals("200") && log.getType().equals("Professor")) {
         	System.out.print("Professor");
+        	CurrentUser.setId(log.getId());
+        	System.out.println(CurrentUser.getId());
         } else if(log.getResponse().equals("200") && log.getType().equals("Student")) {
         	System.out.println("Student");
+        	CurrentUser.setId(log.getId());
+        	StudentPanel sp = new StudentPanel();
+        	sp.main(null);
+        	System.out.println(CurrentUser.getId());
         } else if(log.getResponse().equals("200") && log.getType().equals("Faculty")) {
         	System.out.println("Faculty");
+        	CurrentUser.setId(log.getId());
+        	System.out.println(CurrentUser.getId());
+        	AdminMenu am = new AdminMenu();
+        	am.main(null);
         }else {
         	System.out.println("Login errors");
+        	CurrentUser.setId(-1);
         }
         	
         
